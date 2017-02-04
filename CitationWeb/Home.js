@@ -906,7 +906,6 @@
                     j++;
                     citLocs.splice(minIndex, 1);
                 }while (citLocs.length>0)
-   
                 //implement replacement logic to put citations in correct forms A,B & C and pinpoint too
                 var takeOrgive = 0; var len; var citForm;
                 for (var u = 0; u < citLocsSorted.length; u++) {
