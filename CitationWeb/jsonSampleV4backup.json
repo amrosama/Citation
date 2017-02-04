@@ -1,0 +1,158 @@
+{
+    "user": {
+        "__v": 1,
+        "_id": "55ac290a04a213a441b93b12",
+        "email": "tester1@gmail.com",
+        "role": "admin",
+        "groups": [ { "gId": "55ac290a04a213a441b93b23" } ],
+        "password": "$2a$05$5yvN3///cMtUNSkgxbErC.Q7HA1sBXm0O9Nij4KGD.TiIH1IX4zbS",
+        "profile": { "name": "Rick" },
+        "resetPasswordExpires": "2016-03-23T02:20:14.648Z",
+        "resetPasswordToken": "b575e2e7c0335b0f87cc24a92297845f",
+        "tokens": [ ],
+        "username": "tester1"
+    },
+    "userMatters": [
+        {
+            "userID": "aaa",
+            "matterId": "zzzz"
+        },
+        {
+            "userID": "aaa",
+            "matterId": "zzzzU"
+        },
+        {
+            "userID": "ddddddddddddddddddddddd",
+            "matterId": "ddddddddddddddddddd"
+        },
+        {
+            "userID": "ddddddddddddddddddddddd",
+            "matterId": "ddddddddddddddddddd"
+        }
+    ],
+    "matters": [
+        {
+            "_id": "1111111111111122",
+            "Name": "Matter 1",
+            "citations": [
+                { "cid": "1111111111111111" },
+                { "cid": "2222222222222222" },
+                { "cid": "333333333333333" }
+            ],
+            "OwnerId": "kkkkkkkkkkk",
+            "created": "datefield",
+            "modified": "datefield"
+        },
+        {
+            "_id": "zzzz",
+            "Name": "Matter 2",
+            "citations": [
+                { "cid": "1111111111111111" },
+                { "cid": "2222222222222222" },
+                { "cid": "333333333333333" }
+            ],
+            "created": "datefield",
+            "modified": "datefield"
+        },
+        {
+            "_id": "zzzzU",
+            "Name": "Matter 3",
+            "citations": [
+                { "cid": "1111111111111111" },
+                { "cid": "2222222222222222" },
+                { "cid": "4444444444444444" }
+            ],
+            "created": "datefield",
+            "modified": "datefield"
+        }
+    ],
+    "citations": [
+        {
+            "Library": true,
+            "_id": "1111111111111111",
+            "lastEditUserId": "oooooooooooooooo",
+            "creatorId": "oooooooooooooooo",
+            "formA": "M1 form A 1",
+            "formB": "M1 form B 1",
+            "formC": "M1 form C details 1",
+            "Number": "101",
+            "CaseName": "some case name",
+            "Reporter": "some reporter",
+            "Abrev": "some abrev",
+            "InitialPage": "some initial page",
+            "PinPoint": [
+                { "p1": "10" },
+                { "p2": "12" }
+            ],
+            "Court": "some court",
+            "Date": "some date",
+            "History": "some history",
+            "Other": "Extra text at end of long in ()",
+            "formManEdit": true,
+            "type": "alwood or westlaw",
+            "version": "12",
+            "userID": "dddddddddddddddd",
+            "created": "datefield",
+            "modified": "datefield",
+            "highlighted": ""
+        },
+        {
+            "Library": true,
+            "_id": "1111111111111112",
+            "lastEditUserId": "data 102 last edit user id",
+            "creatorId": "data 102 creator id",
+            "formA": "aa",
+            "formB": "bb",
+            "formC": "cc",
+            "Number": "102",
+            "CaseName": "data 102 case name",
+            "Reporter": "data 102 reporter",
+            "Abrev": "data 102 abrev",
+            "InitialPage": "data 102 initial page",
+            "PinPoint": [
+                { "p1": "" },
+                { "p2": "" }
+            ],
+            "Court": "data 102 court",
+            "Date": "data 102 date",
+            "History": "data 102 history",
+            "Other": "data 102 other",
+            "formManEdit": true,
+            "type": "data 102 type",
+            "version": "data 102 version",
+            "userID": "data 102 user id",
+            "created": "data 102 created",
+            "modified": "data 102 modified",
+            "highlighted": "data 102 highlighted"
+        },
+        {
+            "Library": true,
+            "_id": "333333333333333",
+            "lastEditUserId": "data 333 last edit user id",
+            "creatorId": "data 333 creator id",
+            "formA": "aaA33",
+            "formB": "bbB33",
+            "formC": "ccC33",
+            "Number": "103",
+            "CaseName": "data 333 case name",
+            "Reporter": "data 333 reporter",
+            "Abrev": "data 333 abrev",
+            "InitialPage": "data 333 inital page",
+            "PinPoint": [
+                { "p1": "" },
+                { "p2": "" }
+            ],
+            "Court": "data 333 court",
+            "Date": "data 333 date",
+            "History": "data 333 hsitory",
+            "Other": "data 333 other",
+            "formManEdit": true,
+            "type": "data 333 type",
+            "version": "data 333 version",
+            "userID": "data 333 user id",
+            "created": "data 333 created",
+            "modified": "data 333 modified",
+            "highlighted": "data 333 highlighted"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+﻿
+function			link which say it is compatible with word for mac 2016
+getFileAsync		http://dev.office.com/reference/add-ins/shared/document.getfileasync
+getSelectedDataAsync https://dev.office.com/reference/add-ins/office-add-in-requirement-sets?product=outlook
+setSelectedDataAsync https://dev.office.com/reference/add-ins/office-add-in-requirement-sets?product=outlook
+
+function			not supported
+select				http://dev.office.com/reference/add-ins/shared/office.select

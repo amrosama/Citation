@@ -1,0 +1,34 @@
+﻿Published at
+http://citationwebapp.azurewebsites.net/Home.html
+
+mainfest path
+C:\Users\amr\OneDrive\_Projects\Rick Projects\Citation\Citation\bin\Debug\app.publish\OfficeAppManifests 
+
+
+Links
+Read and write do word document 
+https://msdn.microsoft.com/en-us/magazine/jj991976.aspx
+
+Try it out in Word 2016 for Mac
+http://dev.office.com/docs/add-ins/word/word-add-ins
+
+matters/citations dataTable
+https://datatables.net/examples/api/select_row.html
+
+
+____________________________________________________________________________________________________________
+*in citation in json file "Library":true, means belongs to correct library
+    
+	"citations": [
+        {
+            "Library":  true,
+
+			____________________________________________________________________________________________________________
+Try it out in Word 2016 for Mac
+http://dev.office.com/docs/add-ins/word/word-add-ins
+
+How to check if my office 365 app compatible with office 2016 for mac or not
+http://stackoverflow.com/questions/38457838/how-to-check-if-my-office-365-app-compatible-with-office-2016-for-mac-or-not?noredirect=1#comment64328902_38457838
+
+Persisting add-in state and settings
+http://dev.office.com/docs/add-ins/develop/persisting-add-in-state-and-settings

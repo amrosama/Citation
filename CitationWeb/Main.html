@@ -1,0 +1,105 @@
+﻿<div id="content-main">
+    <div class="padding">
+        <!--<br />
+        <p class="ms-font-xxl ms-fontColor-neutralSecondary ms-fontWeight-semilight">Sample</p>
+        <br /><br />
+        <div class="ms-font-xl ms-fontColor-neutralTertiary">Select some text</div>
+        <p class="ms-font-m-plus ms-fontColor-neutralTertiary" id="template-description"></p>
+        <div class="ms-font-m"><a target="_blank" class="ms-Link ms-Link--hero" href="https://go.microsoft.com/fwlink/?LinkId=276812">Find more samples online...</a></div>
+        <br /><br />-->
+        <div id="loginDiv">
+            <div class="ms-TextField"><label class="ms-Label" style="color:#BDBDBD;">Username</label> <input id="usernameField" class="ms-TextField-field" type="text" style="color:#BDBDBD;"> <span class="ms-TextField-description"></span></div>
+            <div class="ms-TextField"><label class="ms-Label" style="color:#BDBDBD;">Password</label> <input id="passwordField" class="ms-TextField-field" type="password" style="color:#BDBDBD;"> <span class="ms-TextField-description"></span></div>
+            <div style="text-align:center">
+                <button class="ms-Button ms-Button--primary" style="width:150px;" id="Signin-button">
+                    <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                    <span class="ms-Button-label" id="button-sign-text"></span>
+                    <span class="ms-Button-description" id="button-desc"></span>
+                </button>
+            </div>
+            <br /><br />
+            <img id="signing1" src="Images/circular.gif" alt="Signing in.." style="position:relative;top:-15px;left:70px;width:50px;display:none;">
+            <img id="signing2" src="Images/signing_in.gif" alt="Signing in.." style="position:relative;top:-20px;left:75px;width:90px;display:none;">
+            <div id="loginMessageDIV"></div>
+        </div>
+        <div id="mattersListDiv"></div>
+
+        <div id="correctLegalDiv" style="display:none">
+            <br /><br />
+            <!--next line for generated list from json file-->
+            <div id="citationListDIV"></div>
+
+            <!--<button class="ms-Button ms-Button--primary" id="highlight-button">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label" id="button-text"></span>
+                <span class="ms-Button-description" id="button-desc"></span>
+            </button>
+            <button class="ms-Button ms-Button--primary" id="citation-test">
+                <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span>
+                <span class="ms-Button-label" id="button-citation-text"></span>
+                <span class="ms-Button-description" id="button-desc"></span>
+            </button>
+            <button id="afterSelectionBton">after selection</button>-->
+        </div>
+
+        <div id="citationsDiv" style="display:none">
+            <br />
+            <div style="text-align:center">Correct Legal</div>
+            <button style="background-image:url(Images/settings.png);border-style:none;background-color:transparent; width:37px;height:37px;position:relative;left:250px;top:-40px"></button>
+            <div class="ms-TextField" style="position:relative;top:-30px;"> <input id="search_field" class="ms-TextField-field" style="width:275px;">  </div>
+            <!--matter and library options-->
+            <div class="ms-ChoiceFieldGroup">
+                <div class="ms-ChoiceField">
+                    <input id="radio_Matter" class="ms-ChoiceField-input" type="radio" name="radio1" style="position:relative;left:0;top:-20px;">
+                    <label for="radio_Matter" class="ms-ChoiceField-field" style="position:relative;left:0;top:-20px;"><span class="ms-Label">MATTER</span></label>
+                </div>
+                <div class="ms-ChoiceField">
+                    <input id="radio_myCitations" class="ms-ChoiceField-input" type="radio" name="radio1" style="position:relative;left:110px;top:-57px;">
+                    <label for="radio_myCitations" class="ms-ChoiceField-field" style="position:relative;left:110px;top:-57px;"><span class="ms-Label">My Citations</span></label>
+                </div>
+                <div class="ms-ChoiceField">
+                    <input id="radio_correctLibrary" class="ms-ChoiceField-input" type="radio" name="radio1" style="position:relative;left:0px;top:-57px;">
+                    <label for="radio_correctLibrary" class="ms-ChoiceField-field" style="position:relative;left:0px;top:-57px;"><span class="ms-Label">Correct Library</span></label>
+                </div>
+            </div>
+
+            <button id="search_btn" style="background-image:url(Images/search.png);border-style:none;background-color:transparent; width:37px;height:37px;position:relative;left:250px;top:-184px"></button>
+
+            <button id="mainSelect_btn" style="background-image:url(Images/select.png);border-style:none;background-color:transparent; width:37px;height:37px;position:relative;left:30px;top:-50px"></button>
+            <button id="mainNew_btn" style="background-image:url(Images/new.png);border-style:none;background-color:transparent; width:37px;height:37px;position:relative;left:60px;top:-50px"></button>
+            <button id="mainFormat_btn" style="background-image:url(Images/format.png);border-style:none;background-color:transparent; width:37px;height:37px;position:relative;left:90px;top:-50px"></button>
+            <br /><br />
+            
+            <!--<button id="test_btn" style="width:47px;height:37px;position:relative;left:90px;top:-50px">test</button>-->
+
+            <div id="citationsListDiv" style="position:relative;top:-50px;"></div>
+
+            <div style="text-align:center">
+                <button class="ms-Button ms-Button--primary" style="width:70px;background-color:#0078D7;color:white;outline:none;border:none;height:50px;border-radius: 40px;" id="insert-button">Insert</button>
+            </div>
+            <div id="testDiv" style="background-color:red;"></div>
+        </div>
+    </div>
+
+    <!--<div class="footer">
+        <div class="ms-Grid ms-bgColor-themeSecondary">
+            <div class="ms-Grid-row">
+                <div class="ms-Grid-col ms-u-sm12 ms-u-md12 ms-u-lg12"> <div class="ms-font-xl ms-fontColor-white">Contoso</div></div>
+            </div>
+        </div>
+    </div>-->
+    <!-- FabricUI component used for displaying notifications -->
+    <div class="ms-MessageBanner" style="position:absolute;bottom: 0;">
+        <div class="ms-MessageBanner-content">
+            <div class="ms-MessageBanner-text">
+                <div class="ms-MessageBanner-clipper">
+                    <div class="ms-font-m-plus ms-fontWeight-semibold" id="notificationHeader"></div>
+                    <div class="ms-font-m ms-fontWeight-semilight" id="notificationBody"></div>
+                </div>
+            </div>
+            <button class="ms-MessageBanner-expand" style="display:none"><i class="ms-Icon ms-Icon--chevronsDown"></i> </button>
+            <div class="ms-MessageBanner-action"></div>
+        </div>
+        <button class="ms-MessageBanner-close"> <i class="ms-Icon ms-Icon--x"></i> </button>
+    </div>
+</div>

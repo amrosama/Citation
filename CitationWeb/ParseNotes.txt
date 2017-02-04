@@ -1,0 +1,103 @@
+﻿    //to insert to parse backend, table: citations ,columns: reporter and abrev
+
+	        var TestObject = Parse.Object.extend("citations");
+        var testObject = new TestObject();
+        testObject.save({ reporter: "reporter 2",abrev:"abre 2" }).then(function (object) {
+            alert("yay! it worked");
+        });
+
+//to update parse record, upon objectID=EuBvb4kBQs
+ var GameScore = Parse.Object.extend("citations");
+        var query = new Parse.Query(GameScore);
+        query.get("EuBvb4kBQs", {
+            success: function (gameScore) {
+                // The object was retrieved successfully.
+                gameScore.save({ reporter: "reporter 3", abrev: "abre 3" }).then(function (object) {
+                  //  alert("yay! it worked");
+                });
+            },
+            error: function (object, error) {
+                // The object was not retrieved successfully.
+                // error is a Parse.Error with an error code and message.
+            }
+        });
+
+//to updagte parse record(s), upon query, where reporter starts with rep
+ var GameScore = Parse.Object.extend("citations");
+        var query = new Parse.Query(GameScore);
+        query.startsWith("reporter", "rep");
+        query.find({
+            success: function (results) {
+                //  alert("Successfully retrieved " + results.length + " scores.");
+                // Do something with the returned Parse.Object values
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    object.save({ reporter: "reporter " + i + " n", abrev: "abre value vvv" }).then(function (object) {
+                        //  alert("yay! it worked");
+                    });
+                }
+            },
+            error: function (error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+
+//to delete parse record
+var GameScore = Parse.Object.extend("citations");
+        var query = new Parse.Query(GameScore);
+        query.get("EuBvb4kBQs", {
+            success: function (gameScore) {
+                // The object was retrieved successfully.
+                gameScore.destroy({
+                    success: function (myObject) {
+                        // The object was deleted from the Parse Cloud.
+                    },
+                    error: function (myObject, error) {
+                        // The delete failed.
+                        // error is a Parse.Error with an error code and message.
+                    }
+                });
+            },
+            error: function (object, error) {
+                // The object was not retrieved successfully.
+                // error is a Parse.Error with an error code and message.
+            }
+        });
+
+//to select parse record
+  var GameScore = Parse.Object.extend("citations");
+        var query = new Parse.Query(GameScore);
+        query.startsWith("reporter", "rep");//if this line not exists, then will get all records 
+        query.find({
+            success: function (results) {//results contins rows 
+                var row = results[0];
+                var reporter = row.get("reporter");//reporter is the column
+            },
+            error: function (error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+
+
+
+
+
+		///////////////////////////////////////////////////////
+	
+	    //connecting to parse test
+        //https://parse.com/apps/quickstart#parse_data/web/existing
+        Parse.initialize("ASDFGHJKL12345LEL5MDLEDTSOALDOSPDOSDELCE");
+        Parse.serverURL = 'https://correctlegal.herokuapp.com/parse'
+
+        var User = Parse.Object.extend("User");
+        var query = new Parse.Query(User);
+        query.equalTo("username", "amr");
+        query.first({
+            success: function (result) {
+                var username = result.get("username");
+            }, error: function (error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+
+http://parseplatform.github.io/docs/js/guide/#retrieving-objects

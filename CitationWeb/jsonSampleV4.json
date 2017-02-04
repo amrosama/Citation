@@ -1,0 +1,172 @@
+{
+    "user": {
+        "__v": 1,
+        "_id": "55ac290a04a213a441b93b12",
+        "email": "tester1@gmail.com",
+        "role": "admin",
+        "groups": [ { "gId": "55ac290a04a213a441b93b23" } ],
+        "password": "$2a$05$5yvN3///cMtUNSkgxbErC.Q7HA1sBXm0O9Nij4KGD.TiIH1IX4zbS",
+        "profile": { "name": "Rick" },
+        "resetPasswordExpires": "2016-03-23T02:20:14.648Z",
+        "resetPasswordToken": "b575e2e7c0335b0f87cc24a92297845f",
+        "tokens": [ ],
+        "username": "tester1"
+    },
+    "userMatters": [
+        {
+            "userID": "aaa",
+            "matterId": "zzz"
+        },
+        {
+            "userID": "aaa",
+            "matterId": "uuu"
+        },
+        {
+            "userID": "ddddddddddddddddddddddd",
+            "matterId": "ddddddddddddddddddd"
+        }
+    ],
+    "matters": [
+        {
+            "_id": "1111111111111122",
+            "Name": "Matter 1",
+            "citations": [
+                { "cid": "1111111111111111" },
+                { "cid": "1111111111111112" },
+                { "cid": "333333333333333" }
+            ],
+            "OwnerId": "kkkkkkkkkkk",
+            "created": "datefield",
+            "modified": "datefield"
+        },
+        {
+            "_id": "zzz",
+            "Name": "Matter 2",
+            "citations": [
+                { "cid": 369899297 },
+                { "cid": 176287707 },
+                { "cid": 657012066 }
+            ],
+            "created": "datefield",
+            "modified": "datefield"
+        },
+        {
+            "_id": "uuu",
+            "Name": "Matter 3",
+            "citations": [ { "cid": 221019432 } ],
+            "created": "datefield",
+            "modified": "datefield"
+        }
+    ],
+    "citations": [
+        {
+            "_id": 221019432,
+            "formA": "a,a,a",
+            "formB": "b,b",
+            "formC": "c",
+            "Number": "a",
+            "CaseName": "a",
+            "Reporter": "a",
+            "Abrev": "a",
+            "InitialPage": "a",
+            "PinPoint": "10,20,30",
+            "Court": "a",
+            "Date": "a",
+            "History": "a",
+            "Library": "",
+            "lastEditUserId": "",
+            "creatorId": "aaa",
+            "Other": "",
+            "formManEdit": "",
+            "type": "",
+            "version": "",
+            "userID": "",
+            "created": "",
+            "modified": "",
+            "highlighted": ""
+        },
+        {
+            "_id": 369899297,
+            "formA": "Ewing v. Northridge Hosp. Med. Ctr., 16 Cal. Rptr. 3d 591, 602 (Cal. Ct. App. 2004).",
+            "formB": "Ewing, 16 Cal. Rptr. 3d at 602.",
+            "formC": "369899297",
+            "Number": "369899297",
+            "CaseName": "Ewing v. Northridge Hosp. Med. Ctr.",
+            "Reporter": "16",
+            "Abrev": "Cal. Rptr. 3d",
+            "InitialPage": "591",
+            "PinPoint": "602",
+            "Court": "Cal. Ct. App.",
+            "Date": "2004",
+            "History": "",
+            "Library": "",
+            "lastEditUserId": "",
+            "creatorId": "aaa",
+            "Other": "",
+            "formManEdit": "",
+            "type": "",
+            "version": "",
+            "userID": "",
+            "created": "",
+            "modified": "",
+            "highlighted": "",
+            "onlineCitation": false
+        },
+        {
+            "_id": 176287707,
+            "formA": "Miranda v. Arizona, 384 U.S. 436, 443 ( 1966).",
+            "formB": "Miranda, 384 U.S. at 443.",
+            "formC": "176287707",
+            "Number": "707332165",
+            "CaseName": "Miranda v. Arizona2",
+            "Reporter": "384",
+            "Abrev": "U.S.",
+            "InitialPage": "436",
+            "PinPoint": "443",
+            "Court": "",
+            "Date": "1966",
+            "History": "",
+            "Library": "",
+            "lastEditUserId": "",
+            "creatorId": "aaa",
+            "Other": "",
+            "formManEdit": "",
+            "type": "",
+            "version": "",
+            "userID": "",
+            "created": "",
+            "modified": "",
+            "highlighted": "",
+            "onlineCitation": false
+        },
+        {
+            "_id": 657012066,
+            "formA": "Uplinger v. Howe, No. 302829, 2012 WL 933752, at *3 (Mich. Ct. App. Mar. 20, 2012).",
+            "formB": "Uplinger, 2012 WL 933752, at *3.",
+            "formC": "657012066",
+            "Number": "657012066",
+            "CaseName": "Uplinger v. Howe",
+            "dbIdentifier": "2012 WL 933752",
+            "DocketNum": "302829",
+            "PinPoint": "at *3",
+            "Court": "Mich. Ct. App.",
+            "Date": "Mar. 20, 2012",
+            "History": "",
+            "Library": "",
+            "lastEditUserId": "",
+            "creatorId": "aaa",
+            "Other": "",
+            "formManEdit": "",
+            "type": "",
+            "version": "",
+            "userID": "",
+            "created": "",
+            "modified": "",
+            "highlighted": "",
+            "onlineCitation": true,
+            "Reporter": "undefined",
+            "Abrev": "undefined",
+            "InitialPage": "undefined"
+        }
+    ]
+}
