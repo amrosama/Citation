@@ -908,21 +908,34 @@
                 } while (citLocs.length > 0)
 
                 //implement replacement logic to put citations in correct forms A,B & C and pinpoint too
-                var takeOrgive = 0; var len; var citForm;
+                var takeOrgive = 0; var len; var citForm; var replacement;
                 for (var u = 0; u < citLocsSorted.length; u++) {
-                    if (citLocsSorted[u][1] == 'A') { len = getCitInfo(citLocsSorted[u][0], 'formA').length; citForm = getCitInfo(citLocsSorted[u][0], 'formA'); }
-                    else if (citLocsSorted[u][1] == 'B') { len = getCitInfo(citLocsSorted[u][0], 'formB').length; citForm = getCitInfo(citLocsSorted[u][0], 'formB'); }
-                    else { len = getCitInfo(citLocsSorted[u][0], 'formC').length; citForm = getCitInfo(citLocsSorted[u][0], 'formC'); }
-                    dataValue = dataValue.replace(dataValue.substring(citLocsSorted[u][2] - takeOrgive , citLocsSorted[u][2] - takeOrgive + len), getCitInfo(citLocsSorted[u][0], 'formC'))
-                    takeOrgive += getCitInfo(citLocsSorted[u][0], 'formB').length - getCitInfo(citLocsSorted[u][0], 'formC').length;
+                    if (citLocsSorted[u][1] == 'A')  len = getCitInfo(citLocsSorted[u][0], 'formA').length; 
+                    else if (citLocsSorted[u][1] == 'B')  len = getCitInfo(citLocsSorted[u][0], 'formB').length;
+                    else  len = getCitInfo(citLocsSorted[u][0], 'formC').length; 
+                    //rules of citation replacements 
+                    if(u==0) replacement = getCitInfo(citLocsSorted[u][0], 'formA');
+                    else if (citLocsSorted[u - 1][0] == citLocsSorted[u][0]) replacement = "<i>Id</i>."
+                    else if (notExistsBefore(citLocsSorted[u][0],u,citLocsSorted)) replacement = getCitInfo(citLocsSorted[u][0], 'formA');
+                    else  replacement = getCitInfo(citLocsSorted[u][0], 'formB');
+
+                    dataValue = dataValue.replace(dataValue.substring(citLocsSorted[u][2] - takeOrgive, citLocsSorted[u][2] - takeOrgive + len), replacement)
+
+                    takeOrgive += len - replacement.length;
+
                 }
                 
                 Office.context.document.setSelectedDataAsync(dataValue,
-                                     { coercionType: Office.CoercionType.Text },
+                                     { coercionType:Office.CoercionType.Html /*Office.CoercionType.Text },
                                      function (result) {  /* Access the results, if necessary.*/ });
                 break;
             }    
         citLocs.length = 0;
+    }
+    function notExistsBefore(citId,index,array){
+        for (var i = index-1; i > -1; i--)
+            if(array[i][0]==citId){return false;}
+        return true;
     }
     var myFile_;//this used to be able to call closeAsync, other wise error will come up after 3rd time f using 
     // Get all of the content from a Word document in 1KB chunks of text.
